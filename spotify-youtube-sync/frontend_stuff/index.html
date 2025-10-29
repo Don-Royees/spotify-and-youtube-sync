@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>playlist syncer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="project_name">spotify ,youtube music syncer</h1>
+      <div class="header">
+        <!-- when spotify button or youtube button is pressed then javascritpt onclikc will redirect-->
+        <span>
+          <button id="spotify_b" class="button">spotify account</button>
+        </span>
+        <span>
+          <button id="yt_music_b" class="button">youtube music account</button>
+        </span>
+        <button id="playlist_sync_b" class="button">playlist to sync</button>
+      </div>
+      <div>
+        <h2 id="error_m"></h2>
+      </div>
+      <div class="playlists">
+        <div class="sync_playlist" class="button">
+          <h2>synced playlist</h2>
+          <div class="playlist_list">
+            <li></li>
+          </div>
+        </div>
+        <div class="new_songs">
+          <h2>songs that were added</h2>
+          <div class="new_songs_list"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

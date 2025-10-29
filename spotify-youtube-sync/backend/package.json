@@ -1,0 +1,19 @@
+{
+  "name": "spotify-app",
+  "version": "1.0.0",
+  "description": "A simple Node.js app using the Spotify Web API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon ./index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "spotify": "^0.3.0",
+    "spotify-web-api-node": "^5.0.2"
+  }
+}
