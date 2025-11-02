@@ -60,6 +60,8 @@ app.get('/get_playlist', async (req, res) => {
   }
 });
 
+//this is for the youtube music callback for hte token
+
 //after user logged in it calls back to this part of the page
 app.get('/spotifycallback', async (req, res) => {
   const authorizationCode = req.query.code || null;

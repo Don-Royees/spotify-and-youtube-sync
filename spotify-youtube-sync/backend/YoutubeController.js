@@ -2,14 +2,13 @@ import dotenv from 'dotenv';
 dotenv.config();
 const youtubeClientId = process.env.YOUTUBE_CLIENT_ID;
 const youtubeClientSecret = process.env.YOUTUBECLIENTSECRET;
-const redirect_uri = 'http://localhost:3000/youtube-auth'
+const redirect_uri = 'http://localhost:3000/youtubecallback';
 const express = require('express');
 const crypto = require('crypto');
 const { google } = require('googleapis');
 const session = require('express-session');
 
 const getYoutubeToken = async () => {
-
   /**
    * To use OAuth2 authentication, we need access to a CLIENT_ID, CLIENT_SECRET, AND REDIRECT_URI
    * from the client_secret.json file. To get these credentials for your application, visit
@@ -18,7 +17,7 @@ const getYoutubeToken = async () => {
   const oauth2Client = new google.auth.OAuth2(
     youtubeClientId,
     youtubeClientSecret,
-    YOUR_REDIRECT_URL
+    redirect_uri
   );
 
   // Access scopes for two non-Sign-In scopes: Read-only Drive activity and Google Calendar.
@@ -45,4 +44,5 @@ const getYoutubeToken = async () => {
     // Include the state parameter to reduce the risk of CSRF attacks.
     state: state,
   });
+  console.log(getYoutubeToken());
 };
